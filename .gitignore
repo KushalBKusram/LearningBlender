@@ -1,0 +1,14 @@
+# Generated check renders and storyboard stills: scripts/ rebuilds them (see README)
+session-*/renders/
+session-17/panels/
+session-17/storyboard_panels.png
+
+# Blender backup files
+*.blend1
+*.blend2
+
+# Local noise
+.DS_Store
+__pycache__/
+*.pyc
+scripts/rebuild_all.log
