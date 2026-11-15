@@ -779,10 +779,10 @@ def check(frames=(24, 72, 114, 160, 214, 270), pct=50):
     print("CONTACT_SHEET_DONE")
 
 
-def preview():
+def preview(pct=50, samples=24):
     scene = bpy.context.scene
-    scene.render.resolution_percentage = 50
-    scene.cycles.samples = 24
+    scene.render.resolution_percentage = pct
+    scene.cycles.samples = samples
     r = scene.render
     # Audio is only mixed when the sequencer is on. With every colour placeholder muted and only the
     # sound strip left, Blender still renders the 3D scene as the picture.
@@ -812,6 +812,8 @@ if __name__ == "__main__":
         check(tuple(int(a) for a in args[1:]) or (24, 72, 114, 160, 214, 270))
     elif mode == "preview":
         preview()
+    elif mode == "preview720":
+        preview(pct=100, samples=32)
     elif mode == "dense":
         dense()
     elif mode == "glow":
