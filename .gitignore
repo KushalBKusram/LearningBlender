@@ -1,5 +1,7 @@
 # Generated check renders and storyboard stills: scripts/ rebuilds them (see README)
-session-*/renders/
+session-*/renders/*
+!session-18/renders/
+!session-18/renders/preview.mp4
 session-17/panels/
 session-17/storyboard_panels.png
 
